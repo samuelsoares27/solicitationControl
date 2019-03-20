@@ -1,0 +1,24 @@
+
+<table class="table table-hover">
+  <thead>
+    <tr>
+      <th scope="col">#</th>
+      <th scope="col">Descrição</th>
+      <th scope="col">Sistema</th>
+      <th scope="col">Problema</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr *ngFor="let prot of protocolo">
+      <td>{{prot.num_protocolo}}</td>
+      <td>{{prot.des_prob}}</td>
+      <td>{{prot.nome_sis}}</td>
+      <td>{{prot.des_prob}}</td>
+      <button type="button" class="btn btn-success"><span class="glyphicon glyphicon-ok"></span></button>
+      <button type="button" class="btn btn-warning"><span class="glyphicon glyphicon-pencil"></span></button>
+      <button type="button" class="btn btn-danger"><span class="glyphicon glyphicon-trash"></span></button>
+    </tr>
+  </tbody>
+
+  <button type="button" class="btn btn-danger"  (click)="Adiciona()"></button>
+</table>

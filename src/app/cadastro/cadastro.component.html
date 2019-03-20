@@ -1,0 +1,55 @@
+
+<div class="container">
+  
+    <form  class="form-row" [formGroup]="formulario" method="post" (ngSubmit)="criar() "><br>
+  
+  
+          <div class="form-group col-md-6">
+            <label>Número do protocolo</label>
+            <input type="text" class="form-control" placeholder="Protocolo" formControlName="num_protocolo">
+          </div>
+  
+          <div class="form-group col-md-6">
+              <label>Modulo do Sistema</label>
+              <input type="text" class="form-control" placeholder="Modulo do Sistema"  formControlName="mod_sis">
+          </div>
+  
+          <div class="form-group col-md-12">
+            <label>Descrição do problema</label>
+            <input type="text" class="form-control" placeholder="Problema"  formControlName="des_prob">
+          </div>
+  
+          <div class="form-group col-md-6">
+            <label>Nome do Sistema</label>
+            <input type="text" class="form-control" placeholder="Nome do Sistema" formControlName="nome_sis">
+          </div>
+  
+          <div class="form-group col-md-6">
+              <label>Base de dados</label>
+              <input type="text" class="form-control" placeholder="Base" formControlName="db_base">
+          </div>
+  
+          <div class="form-group col-md-12">
+            <label>Descrição</label>
+            <textarea [ngModel]="desc" class="form-control rounded-0" rows="6"  formControlName="desc"></textarea>
+          </div>
+      
+        <div class="form-group col-md-12">
+            <button type="submit" class="btn btn-primary" [disabled]="formulario.invalid">Cadastrar</button>
+        </div>
+  
+    </form>
+  </div>
+  
+  
+   <ng-template #template>
+    <div class="modal-header">
+      <h4 class="modal-title pull-left">Modal</h4>
+      <button type="button" class="close pull-right" aria-label="Close" (click)="modalRef.hide()">
+        <span aria-hidden="true">&times;</span>
+      </button>
+    </div>
+    <div class="modal-body">
+      This is a modal.
+    </div>
+  </ng-template>  

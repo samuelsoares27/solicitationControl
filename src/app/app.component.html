@@ -1,0 +1,16 @@
+<link href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/css/bootstrap.min.css" rel="stylesheet">
+
+
+<div class="container">
+  <h2>Cadastro pessoal de solicitações</h2>
+</div>
+<div class="container">
+  <tabset>
+    <tab heading="Lista" id="lista"> <app-lista [Lista]="cad.resposta"></app-lista>  </tab>
+    <tab heading="Cadastro" id="cadastro"> <app-cadastro #cad></app-cadastro>  </tab>
+  </tabset>
+</div>
+
+
+
+<router-outlet></router-outlet>
